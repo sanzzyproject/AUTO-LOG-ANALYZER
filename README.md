@@ -1,23 +1,35 @@
-# 📊 Automated Server Log Analyzer
+# 🛡️ Automated Log Analyzer
 
-**Automated Log Analyzer** adalah *tools* berbasis Python dan Bash untuk menganalisis log server (seperti NGINX atau Apache) secara otomatis. Alat ini dirancang untuk mendeteksi anomali trafik, mencatat statistik request per jam, dan menghasilkan laporan harian yang dijalankan melalui Cronjob.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Linux%20Server-green?style=for-the-badge&logo=linux&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-brightgreen?style=for-the-badge)
+
+**Automated Log Analyzer** adalah solusi ringan dan efisien untuk memantau kesehatan server Linux. Proyek ini menggabungkan kekuatan **Python** untuk analisis data statistik dan regex, dengan **Bash Scripting** untuk otomatisasi pipeline sistem.
+
+Alat ini dirancang untuk membaca log akses web server (NGINX/Apache), mendeteksi anomali (seperti potensi serangan DDoS atau Brute Force), dan mengirimkan laporan harian secara otomatis tanpa intervensi manual.
+
+---
 
 ## 🚀 Fitur Utama
 
-- **Parsing Otomatis:** Mendukung format standar NGINX/Apache Combined Log.
-- **Deteksi Mencurigakan:** Mengidentifikasi IP dengan jumlah request yang tidak wajar (potensi DDoS/Bruteforce).
-- **Statistik Trafik:** Menghitung request per jam dan distribusi HTTP status code (200, 404, 500, dll).
-- **Format Laporan Fleksibel:** Ekspor laporan dalam bentuk `.txt` (mudah dibaca) atau `.json` (untuk integrasi lain).
-- **Otomasi Penuh:** Dilengkapi script Bash untuk penjadwalan menggunakan Cronjob.
+* **🔍 Deep Parsing:** Menggunakan Regex yang dioptimalkan untuk membaca format *Nginx/Apache Combined Log*.
+* **🛡️ Threat Detection:** Otomatis mendeteksi alamat IP yang melakukan permintaan berlebihan (*Suspicious Activity*).
+* **📊 Traffic Analytics:** Menghitung total request, distribusi HTTP status code (200, 404, 500), dan *peak hours* (trafik per jam).
+* **📑 Multi-Format Report:** Mendukung ekspor laporan dalam format `.txt` (human-readable) dan `.json` (untuk integrasi API/Dashboard).
+* **⏰ Zero-Touch Automation:** Terintegrasi penuh dengan Linux Cronjob untuk berjalan di latar belakang.
+
+---
 
 ## 📂 Struktur Proyek
 
 ```text
 auto-log-analyzer/
-├── src/
-│   └── main.py          # Logika analisis (Python)
-├── scripts/
-│   └── run_daily.sh     # Pipeline untuk Cronjob (Bash)
-├── logs/                # Tempat menaruh file log (input)
-├── reports/             # Hasil analisis tersimpan di sini
+├── 📂 logs/                # Direktori input (contoh access.log)
+├── 📂 reports/             # Direktori output (laporan tersimpan di sini)
+├── 📂 scripts/
+│   └── run_daily.sh        # Entry point untuk Cronjob/Automation
+├── 📂 src/
+│   └── main.py             # Core logic analisis (Python)
+├── .gitignore
 └── README.md
