@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+reports/
+logs/access.log
+cron.log
+.DS_Store
