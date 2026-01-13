@@ -29,20 +29,6 @@ Sebelum memulai, pastikan server atau lingkungan lokal Anda memiliki:
 2.  **Bahasa Pemrograman:** Python 3.6 atau lebih baru.
 3.  **Akses:** Izin baca (*Read Permission*) ke file log server (biasanya di `/var/log/nginx/` atau `/var/log/apache2/`).
 
----
-
-## 📥 Instalasi
-
-Ikuti langkah-langkah berikut untuk memasang proyek ini di server Anda:
-
-### 1. Clone Repository
-```bash
-git clone [https://github.com/username-anda/auto-log-analyzer.git](https://github.com/username-anda/auto-log-analyzer.git)
-cd auto-log-analyzer
-
-
----
-
 ## 📂 Struktur Proyek
 
 ```text
@@ -55,3 +41,25 @@ auto-log-analyzer/
 │   └── main.py             # Core logic analisis (Python)
 ├── .gitignore
 └── README.md
+
+---
+
+## 🛠️ Prasyarat (Requirements)
+
+Sebelum memulai, pastikan server atau lingkungan lokal Anda memiliki:
+
+1.  **Sistem Operasi:** Linux (Ubuntu, Debian, CentOS, atau macOS).
+2.  **Bahasa Pemrograman:** Python 3.6 atau lebih baru.
+3.  **Akses:** Izin baca (*Read Permission*) ke file log server (biasanya di `/var/log/nginx/` atau `/var/log/apache2/`).
+
+---
+
+## 📥 Instalasi
+
+Ikuti langkah-langkah berikut untuk memasang proyek ini di server Anda:
+
+### 1. Clone Repository
+```bash
+git clone [https://github.com/username-anda/auto-log-analyzer.git](https://github.com/username-anda/auto-log-analyzer.git)
+cd auto-log-analyzer
+
